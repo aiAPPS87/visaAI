@@ -1,0 +1,135 @@
+import type { ScreenerQuestion } from "./types"
+
+export const SCREENER_QUESTIONS: ScreenerQuestion[] = [
+  {
+    id: "nationality",
+    question: "What is your current nationality or citizenship?",
+    type: "text",
+    placeholder: "e.g. Indian, Brazilian, Nigerian…",
+    hint: "If you hold multiple citizenships, mention the one you plan to travel on.",
+  },
+  {
+    id: "residence",
+    question: "Which country do you currently live in?",
+    type: "text",
+    placeholder: "e.g. India, Mexico, South Africa…",
+  },
+  {
+    id: "destination",
+    question: "Where would you like to move or travel to?",
+    type: "select",
+    options: [
+      { value: "US", label: "🇺🇸 United States" },
+      { value: "Canada", label: "🇨🇦 Canada" },
+      { value: "UK", label: "🇬🇧 United Kingdom" },
+      { value: "Australia", label: "🇦🇺 Australia" },
+      { value: "Germany", label: "🇩🇪 Germany" },
+    ],
+  },
+  {
+    id: "purpose",
+    question: "What is the main reason for your move?",
+    type: "select",
+    options: [
+      { value: "work", label: "💼 Work or career" },
+      { value: "study", label: "🎓 Study or education" },
+      { value: "family", label: "👨‍👩‍👧 Join family or partner" },
+      { value: "investment", label: "💰 Investment or business" },
+      { value: "retirement", label: "🌴 Retirement" },
+      { value: "visitor", label: "✈️ Tourism or short visit" },
+    ],
+  },
+  {
+    id: "age",
+    question: "How old are you?",
+    type: "number",
+    placeholder: "e.g. 28",
+  },
+  {
+    id: "education",
+    question: "What is your highest level of education?",
+    type: "select",
+    options: [
+      { value: "high_school", label: "High school diploma" },
+      { value: "associate", label: "Associate degree or equivalent" },
+      { value: "bachelor", label: "Bachelor's degree" },
+      { value: "master", label: "Master's degree" },
+      { value: "phd", label: "PhD or Doctorate" },
+      { value: "professional", label: "Professional degree (MD, JD, etc.)" },
+      { value: "none", label: "No formal degree" },
+    ],
+  },
+  {
+    id: "workExperience",
+    question: "How many years of full-time work experience do you have?",
+    type: "number",
+    placeholder: "e.g. 5",
+    hint: "Count only paid, full-time employment.",
+  },
+  {
+    id: "jobTitle",
+    question: "What is your current (or most recent) job title?",
+    type: "text",
+    placeholder: "e.g. Software Engineer, Registered Nurse…",
+  },
+  {
+    id: "jobField",
+    question: "What field or industry do you work in?",
+    type: "text",
+    placeholder: "e.g. Technology, Healthcare, Finance…",
+  },
+  {
+    id: "hasJobOffer",
+    question: "Do you already have a job offer in your destination country?",
+    type: "boolean",
+  },
+  {
+    id: "annualIncome",
+    question: "What is your approximate annual income (in USD)?",
+    type: "number",
+    placeholder: "e.g. 60000",
+    hint: "Used to assess investment and self-sufficiency visas. Leave blank to skip.",
+  },
+  {
+    id: "familyTies",
+    question:
+      "Do you have any close family members in your destination country?",
+    type: "select",
+    options: [
+      { value: "none", label: "No family ties" },
+      { value: "citizen_spouse", label: "Spouse who is a citizen" },
+      { value: "pr_spouse", label: "Spouse with permanent residency" },
+      { value: "citizen_parent", label: "Parent who is a citizen" },
+      { value: "citizen_child", label: "Child who is a citizen" },
+      { value: "other", label: "Other relatives" },
+    ],
+  },
+  {
+    id: "languageProficiency",
+    question: "Which languages are you proficient in?",
+    type: "multiselect",
+    options: [
+      { value: "English", label: "English" },
+      { value: "French", label: "French" },
+      { value: "German", label: "German" },
+      { value: "Spanish", label: "Spanish" },
+      { value: "Mandarin", label: "Mandarin" },
+      { value: "Other", label: "Other" },
+    ],
+  },
+  {
+    id: "priorVisaDenials",
+    question: "Have you ever had a visa application denied or been deported?",
+    type: "boolean",
+    hint: "Honesty here is important — immigration authorities check this.",
+  },
+  {
+    id: "intendedStay",
+    question: "Are you looking for a temporary stay or permanent residency?",
+    type: "select",
+    options: [
+      { value: "temporary", label: "Temporary (a few months to a few years)" },
+      { value: "permanent", label: "Permanent (settle long-term or forever)" },
+    ],
+  },
+]
